@@ -1,4 +1,3 @@
-import os
 from flask import render_template, flash, redirect
 from app import app
 from .forms import LoginForm
@@ -34,4 +33,3 @@ def login():
                            form=form,
                            providers=app.config['OPENID_PROVIDERS'])
     
-app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8080)))
